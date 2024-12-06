@@ -1,0 +1,17 @@
+﻿cd  “project directory”
+cd .\Elixia.Shared
+
+dotnet tool install --global dotnet-ef
+
+dotnet tool update --global dotnet-ef
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+dotnet ef migrations add InitialCreate --context ElixiaDbContext 
+
+dotnet ef database update --context ElixiaDbContext 
+
+
+If we need to generate a script in sql query (.sql) and  If we are Using the context folder in different project - use this below command after Intialcreate done.
+
+dotnet ef migrations script --context ElixiaDbContext -o DbScripts\ElixiaDbFull.sql
