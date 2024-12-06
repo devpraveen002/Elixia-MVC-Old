@@ -4,12 +4,10 @@ namespace Elixia.Shared.DTOs;
 
 public class UserDTO : EntityBaseDTO
 {
-    [JsonPropertyName("createdBy")]
-    public string CreatedBy { get; set; }
-    [JsonPropertyName("createdAt")]
-    public string CreatedAt { get; set; }
-    [JsonPropertyName("modifiedBy")]
-    public string ModifiedBy { get; set; }
-    [JsonPropertyName("modifiedAt")]
-    public string ModifiedAt { get; set; }
+    [JsonPropertyName("userName")]
+    public string UserName { get; set; }
+    [JsonPropertyName("email")]
+    public string Email { get; set; }
+    [JsonPropertyName("address")]
+    public AddressDTO Address { get; set; }
 }

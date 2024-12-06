@@ -2,8 +2,10 @@
 
 namespace Elixia.Shared.DTOs;
 
-public class LoginDTO
+public class LoginPasswordDTO
 {
     [JsonPropertyName("userName")]
     public string UserName { get; set; }
+    [JsonPropertyName("password")]
+    public string Password { get; set; }
 }
